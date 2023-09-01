@@ -106,11 +106,10 @@ p {
 
 /** ContactForm **/
 .contact-form {
-  padding: 1rem;
-  max-width: 100vh;
-  height: 50%;
-  width: 100%;
-  justify-self: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  height: 58vh;
 }
 
 .contact-form > * {
@@ -170,7 +169,7 @@ p {
   fill: var(--second-color);
 }
 
-@media screen and (min-width: 1024px) {  
+@media screen and (min-width: 1024px) {
   .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -190,7 +189,6 @@ p {
   .contact-form input[type="submit"] {
     margin-left: 0;
   }
-
 }
 
 /** ContactForm **/
@@ -261,16 +259,12 @@ p {
   color: white ;
 }
 
-.img-container {
-  border: solid 4px var(--white-color);
-  border-radius: 100%;
-  background-color: var(--second-color);
-}
-
 .img-container img {
-  width: 30vh;
-  height: 30vh;
-  padding: 1vh;
+  border: solid 7px var(--white-color);
+  border-radius: 100%;
+  width: 40vh;
+  height: 40vh;
+  padding: 0.5vh;
 }
 
 .img-container > div {
@@ -286,7 +280,7 @@ p {
   margin: 1rem auto;
   padding: 1rem;
   width: 100%;
-  height: 144px;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -325,11 +319,11 @@ p {
 
 /** Footer **/
 .footer {
-  margin-bottom: var(--header-height);
   padding: 0.5rem;
   text-align: center;
   background-color: var(--second-color);
   color: var(--white-color);
+  margin-bottom: 0;
 }
 
 .footer a {
@@ -351,7 +345,7 @@ p {
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
   }
-  
+
   .footer {
     margin-bottom: 0;
   }
