@@ -200,10 +200,8 @@ p {
 .portfolio-card {
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-  display: block;
-  margin-bottom: 1vh;
+  height: 100%;
+  padding: 1vh;
 }
 
 .portfolio-card img {
@@ -218,7 +216,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1vh;
   background-color: var(--second-alpha-color);
   color: var(--first-color);
   opacity: 0;
@@ -244,10 +242,10 @@ p {
 .portfolio-card:hover .portfolio-card-info {
   opacity: 1;
   pointer-events: auto;
+  cursor: auto;
 }
 
 .portfolio-card-info > div {
-  padding: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -263,19 +261,19 @@ p {
   height: 4vh;
   width: 4vh;
   border-radius: 100%;
+
+}
+
+.portfolio-card-info button:hover {
+  cursor: pointer;
 }
 
 /** Portfolio **/
-
-
 /*! Recycle */
 
+
+
 /**! Site-Styles **/
-
-
-
-
-
 /** About */
 
 .about {
@@ -410,7 +408,7 @@ p {
 
 /** Proyects & Skills **/
 .proyects_skills {
-  padding-top: 3vh;
+  padding-top: 2vh;
   height: 100%;
   background-color: var(--first-color);
   display: flex;
@@ -422,14 +420,12 @@ p {
 .toggle-btn-container {
   display: flex;
   align-items: center;
+  width: 60vh;
   justify-content: center;
   background-color: rgb(43, 43, 43);
-  height: 100%;
-  font-size: 3rem;
   border-radius: .5rem;
   padding: 1vh .5vh 1vh .5vh;
-  margin-bottom: 3vh;
-
+  margin-bottom: 1vh;
 }
 
 
@@ -480,6 +476,7 @@ p {
   text-align: center;
   background-color: rgb(43, 43, 43);
   color: var(--white-color);
+  display: block;
 }
 
 .service-card svg {
@@ -500,12 +497,15 @@ p {
 
 
 @media screen and (min-width: 768px){
+
+
   .contact-cards {
     display: grid;
     grid-template-columns: repeat(2, 48%);
     justify-content: space-between;
   }
 
+  /* Proyects & Skills */
   .proyects_skills > .container {
     display: grid;
     grid-template-columns: repeat(2, 48%);
@@ -521,7 +521,6 @@ p {
   }
 
   .portfolio-info {
-    margin-left: 1rem;
     align-self: center;
   }
 
@@ -529,13 +528,17 @@ p {
   .portfolio-modal img {
     width: 50%;
   }
+  /* Proyects & Skills */
+
+
+
 }
 
 
 @media screen and (min-width: 1024px){
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
-    margin: 0 5vh 0 5vh;
+    
   }
 
   .footer {
@@ -565,7 +568,6 @@ p {
 .none {
   display: none;
 }
-
 
 /**! Site-Styles **/
 
