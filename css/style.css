@@ -202,6 +202,7 @@ p {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
   display: block;
   margin-bottom: 1vh;
 }
@@ -218,14 +219,27 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-color: var(--second-alpha-color);
   color: var(--first-color);
   opacity: 0;
   pointer-events: none;
   transition: all .6s ease-in-out;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
+}
+
+.portfolio-card-info svg {
+  fill: var(--first-color);
+  height: 4vh;
+  width: 4vh;
+  padding: .5vh;
+  background-color: var(--white-color);
+  border-radius: 100%;
+}
+
+.portfolio-card-info svg:hover {
+  background-color: var(--white-alpha-color);
 }
 
 .portfolio-card:hover .portfolio-card-info {
@@ -237,37 +251,23 @@ p {
   padding: 1rem;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-card-info button {
+  background-color: white;
+  border: none;
+  padding: .7vh;
+  height: 4vh;
+  width: 4vh;
+  border-radius: 100%;
 }
 
 /** Portfolio **/
 
-/** Modal **/
-.portfolio-modal {
-  padding: 1rem;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white-color);
-}
-
-.portfolio-modal h3 {
-  border-bottom: medium solid var(--second-color);
-  padding: .5rem 0;
-  margin: 1rem auto;
-  color: var(--title-color);
-}
-
-.portfolio-details {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-auto-rows: 2rem;
-}
-
-.portfolio-details b {
-  color: var(--second-color);
-}
-
-/** Modal **/
 
 /*! Recycle */
 
@@ -390,7 +390,7 @@ p {
 .contact {
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 98vh;
 }
 
 /** Contact **/
@@ -401,7 +401,7 @@ p {
   text-align: center;
   background-color: var(--second-color);
   color: var(--white-color);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .footer a {
@@ -410,7 +410,8 @@ p {
 /** Footer **/
 
 /** Proyects & Skills **/
-.proyects_skills {  
+.proyects_skills {
+  padding-top: 3vh;
   height: 100%;
   background-color: var(--first-color);
   display: flex;
@@ -419,22 +420,33 @@ p {
 }
 
 /* Toggle-Btn */
+.toggle-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(43, 43, 43);
+  height: 100%;
+  font-size: 3rem;
+  border-radius: .5rem;
+  padding: 1vh .5vh 1vh .5vh;
+  margin-bottom: 3vh;
+
+}
+
 
 .button-box {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 7vh;
-  border-radius: .5rem;
-  background-color: rgb(43, 43, 43);
-  padding: 1vh .5vh 1vh .5vh;
-  margin-bottom: 3vh;
 }
 
 .toggle-btn-1, .toggle-btn-2 {
   text-align: center;
   outline: none;
   border: 0;
-  width: 100%;
+  width: 30vh;
+  height: 8vh;
   border-radius: .5rem;
   text-decoration: none;
   color: var(--white-color);
@@ -442,13 +454,47 @@ p {
   margin: 0 .5vh 0 .5vh;
   font-weight: bold;
   font-size: 1rem;
+  
 }
 
 .toggle-btn-1:hover, .toggle-btn-2:hover {
   background-color: var(--first-color);
 }
 
+.is-select {
+  display: block;
+  background-color: var(--first-color);
+}
+
+.is-off {
+  display: none;
+  background-color: transparent;
+}
+
+
 /* Toggle-Btn */
+
+/** Services **/
+.service-card {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(43, 43, 43);
+  color: var(--white-color);
+}
+
+.service-card svg {
+  margin-bottom: .5rem;
+  fill: var(--second-color);
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+}
+
+/** Services **/
+
+
 
 /** Proyects & Skills **/
 
@@ -461,12 +507,12 @@ p {
     justify-content: space-between;
   }
 
-  .portfolio > .container {
+  .proyects_skills > .container {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 48%);
   }
 
-  .portfolio .section-title {
+  .proyects_skills .section-title {
     grid-column: span 2;
   }
   
@@ -497,12 +543,12 @@ p {
     margin-bottom: 0;
   }
 
-  .portfolio > .container {
+  .proyects_skills > .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .portfolio .section-title {
+  .proyects_skills .section-title {
     grid-column: span 3;
   }
 
