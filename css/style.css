@@ -559,10 +559,6 @@ p {
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 .select {
   background-color: var(--first-color);
 }

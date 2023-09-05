@@ -7,6 +7,8 @@
 
   let counter = 1;
 
+  $proyectContent.style.display = 'none';
+
   $proyectBtn.addEventListener('click', (e) => {
     if (counter == 1) {
       $proyectBtn.classList.add('select');
