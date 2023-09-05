@@ -461,7 +461,7 @@ p {
   text-align: center;
   background-color: rgb(43, 43, 43);
   color: var(--white-color);
-  display: block;
+  
 }
 
 .service-card svg {
@@ -518,15 +518,12 @@ p {
   }
   /* Proyects & Skills */
 
-
-
 }
 
 
 @media screen and (min-width: 1024px){
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
-    
   }
 
   .footer {
@@ -564,7 +561,6 @@ p {
 
 .show {
   display: block;
-  transition: ease-in 2s ;
 }
 
 .select {

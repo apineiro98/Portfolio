@@ -11,16 +11,16 @@
     if (counter == 1) {
       $proyectBtn.classList.add('select');
       $skillBtn.classList.remove('select');
-      $proyectContent.classList.remove('none');
-      $skillContent.classList.add('none');
+      $proyectContent.style.display = 'grid';
+      $skillContent.style.display = 'none';
       counter = 0;
     }
   });
 
   $skillBtn.addEventListener('click', (e) => {
     if (counter == 0) {
-      $proyectContent.classList.add('none');
-      $skillContent.classList.remove('none');
+      $proyectContent.style.display = 'none';
+      $skillContent.style.display = 'grid';
       $proyectBtn.classList.remove('select');
       $skillBtn.classList.add('select');
       counter = 1;
