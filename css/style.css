@@ -201,7 +201,8 @@ p {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 1vh;
+  margin: 2vh auto;
+  display: block;
 }
 
 .portfolio-card img {
@@ -414,26 +415,22 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* Toggle-Btn */
 .toggle-btn-container {
   display: flex;
-  align-items: center;
-  width: 60vh;
-  justify-content: center;
+  width: 40vh;
   background-color: rgb(43, 43, 43);
   border-radius: .5rem;
   padding: 1vh .5vh 1vh .5vh;
-  margin-bottom: 1vh;
 }
-
 
 .button-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .toggle-btn-1, .toggle-btn-2 {
@@ -449,23 +446,11 @@ p {
   margin: 0 .5vh 0 .5vh;
   font-weight: bold;
   font-size: 1rem;
-  
 }
 
 .toggle-btn-1:hover, .toggle-btn-2:hover {
-  background-color: var(--first-color);
+  background-color: var(--first-alpha-color);
 }
-
-.is-select {
-  display: block;
-  background-color: var(--first-color);
-}
-
-.is-off {
-  display: none;
-  background-color: transparent;
-}
-
 
 /* Toggle-Btn */
 
@@ -498,6 +483,9 @@ p {
 
 @media screen and (min-width: 768px){
 
+  .toggle-btn-container {
+    width: 60vh;
+  }
 
   .contact-cards {
     display: grid;
@@ -565,10 +553,22 @@ p {
 
 }
 
+
+
+/**! Site-Styles **/
+
+/*! Content-JS */
 .none {
   display: none;
 }
 
-/**! Site-Styles **/
+.show {
+  display: block;
+  transition: ease-in 2s ;
+}
 
+.select {
+  background-color: var(--first-color);
+}
 
+/*! Content-JS */
