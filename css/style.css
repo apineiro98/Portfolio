@@ -411,17 +411,16 @@ p {
 .proyects_skills {
   padding-top: 2vh;
   height: 100%;
+  width: 100%;
   background-color: var(--first-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 /* Toggle-Btn */
 .toggle-btn-container {
   display: flex;
   width: 40vh;
+  height: 10vh;
   background-color: rgb(43, 43, 43);
   border-radius: .5rem;
   padding: 1vh .5vh 1vh .5vh;
@@ -431,21 +430,23 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 10vh;
 }
 
 .toggle-btn-1, .toggle-btn-2 {
   text-align: center;
   outline: none;
   border: 0;
-  width: 30vh;
-  height: 8vh;
+  width: 100%;
+  height: 100%;
   border-radius: .5rem;
   text-decoration: none;
   color: var(--white-color);
-  background-color: transparent;
+  background-color: white;
   margin: 0 .5vh 0 .5vh;
   font-weight: bold;
   font-size: 1rem;
+  z-index: 1;
 }
 
 .toggle-btn-1:hover, .toggle-btn-2:hover {
@@ -564,3 +565,22 @@ p {
 }
 
 /*! Content-JS */
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
