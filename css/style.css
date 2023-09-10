@@ -94,7 +94,7 @@ p {
 /*! Recycle */
 
 .section {
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .container {
@@ -200,15 +200,17 @@ p {
 .portfolio-card {
   position: relative;
   width: 100%;
-  height: 100%;
-  margin: 2vh auto;
+  height: 35vh;
+  margin: 0 auto;
   display: block;
+  align-items: center;
+  margin-bottom: 2vh;
 }
 
 .portfolio-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Evita que ciertas imagenes pierdan la proporcion de la img */
+  object-fit: scale-down; /* Evita que ciertas imagenes pierdan la proporcion de la img */
 }
 
 .portfolio-card-info {
@@ -217,13 +219,17 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 1vh;
   background-color: var(--second-alpha-color);
   color: var(--first-color);
   opacity: 0;
   pointer-events: none;
   transition: all .6s ease-in-out;
-  font-size: 1.1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   text-align: center;
 }
 
@@ -247,12 +253,7 @@ p {
 }
 
 .portfolio-card-info > div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 1vh;
 }
 
 .portfolio-card-info button {
@@ -268,7 +269,6 @@ p {
 .portfolio-card-info button:hover {
   cursor: pointer;
 }
-
 /** Portfolio **/
 /*! Recycle */
 
@@ -409,63 +409,63 @@ p {
 
 /** Proyects & Skills **/
 .proyects_skills {
-  padding-top: 2vh;
   height: 100%;
   width: 100%;
   background-color: var(--first-color);
-  position: relative;
 }
 
 /* Toggle-Btn */
-.toggle-btn-container {
-  display: flex;
-  width: 40vh;
-  height: 10vh;
-  background-color: rgb(43, 43, 43);
-  border-radius: .5rem;
-  padding: 1vh .5vh 1vh .5vh;
-}
 
 .button-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn-container {
+  display: flex;
+  width: 40vh;
   height: 10vh;
+  background-color: rgb(43, 43, 43);
+  border-radius: .3rem;
+  padding: 1vh .5vh 1vh .5vh;
 }
 
 .toggle-btn-1, .toggle-btn-2 {
+  position: relative;
   text-align: center;
   outline: none;
   border: 0;
   width: 100%;
   height: 100%;
-  border-radius: .5rem;
+  border-radius: .3rem;
   text-decoration: none;
   color: var(--white-color);
-  background-color: white;
   margin: 0 .5vh 0 .5vh;
   font-weight: bold;
   font-size: 1rem;
-  z-index: 1;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-.toggle-btn-1:hover, .toggle-btn-2:hover {
-  background-color: var(--first-alpha-color);
+.toggle-efect {
+  background-color: var(--first-color);
 }
 
 /* Toggle-Btn */
 
 /** Services **/
 .service-card {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 1.4rem;
   text-align: center;
   background-color: rgb(43, 43, 43);
   color: var(--white-color);
-  
+  margin-bottom: 2vh;
 }
 
-.service-card svg {
+.service-card > svg {
   margin-bottom: .5rem;
   fill: var(--second-color);
 }
@@ -495,13 +495,16 @@ p {
   }
 
   /* Proyects & Skills */
-  .proyects_skills > .container {
+  .swiper-wrapper > .container {
     display: grid;
-    grid-template-columns: repeat(2, 48%);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2vh;
+    column-gap: 2vh;
   }
 
   .proyects_skills .section-title {
     grid-column: span 2;
+    height: 100vh;
   }
   
   .portfolio-modal {
@@ -519,10 +522,31 @@ p {
   }
   /* Proyects & Skills */
 
+  .portfolio-card {
+    margin-bottom: 0;
+  }
+
+  .service-card {
+    margin-bottom: 0;
+  }
+
 }
 
 
 @media screen and (min-width: 1024px){
+  .proyects_skills {
+    height: 100vh;
+  }
+
+  .portfolio-card {
+    margin-bottom: 0;
+  }
+  
+  .service-card {
+    margin-bottom: 0;
+  }
+  
+  
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
   }
@@ -531,13 +555,17 @@ p {
     margin-bottom: 0;
   }
 
-  .proyects_skills > .container {
+  .swiper-wrapper > .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 2vh;
+    column-gap: 2vh;
   }
 
-  .proyects_skills .section-title {
+  .proyects_skills {
     grid-column: span 3;
+    grid-row: span 3;
   }
 
 
@@ -549,6 +577,7 @@ p {
     grid-column: span 3;
   }
 
+  
 }
 
 
@@ -560,22 +589,18 @@ p {
   display: none;
 }
 
-.select {
-  background-color: var(--first-color);
-}
 
 /*! Content-JS */
-
-
 
 .swiper {
   width: 100%;
   height: 100%;
+  max-width: var(--max-width);
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide img {
